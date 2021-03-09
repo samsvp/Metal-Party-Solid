@@ -1,4 +1,5 @@
 # Metal-Party-Solid
+![Metal Party Solid](./assets/sprites/logo.png)
 
 The ultimate tactical stealth introverted game!
 
