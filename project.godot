@@ -19,6 +19,10 @@ config/name="Metal_Party_Solid"
 run/main_scene="res://Node2D.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
