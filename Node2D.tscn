@@ -251,5 +251,7 @@ script = ExtResource( 5 )
 [node name="PlayerAnim" type="AnimatedSprite" parent="."]
 position = Vector2( 600, 400 )
 frames = SubResource( 33 )
-animation = "WalkLeft"
+animation = "Idle"
+frame = 3
 speed_scale = 0.25
+playing = true
