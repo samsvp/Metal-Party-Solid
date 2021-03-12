@@ -2,11 +2,14 @@
 
 [ext_resource path="res://assets/tile_sets/Node2D.tres" type="TileSet" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://Node2D.gd" type="Script" id=4]
-[ext_resource path="res://Sprite.gd" type="Script" id=5]
+[ext_resource path="res://enemy_patrol.gd" type="Script" id=5]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 96, 216, 0, 0, 0, 0, 80, 408, 0, 0, 0, 0, 552, 232, 0, 0, 0, 0, 544, 392 )
+}
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 4 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
@@ -75,3 +78,6 @@ texture = ExtResource( 3 )
 script = ExtResource( 5 )
 
 [node name="Line2D" type="Line2D" parent="."]
+
+[node name="Waypoints" type="Path2D" parent="."]
+curve = SubResource( 1 )
