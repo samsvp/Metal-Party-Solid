@@ -82,5 +82,6 @@ script = ExtResource( 5 )
 
 [node name="Waypoints" type="Path2D" parent="."]
 curve = SubResource( 1 )
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 500, 400 )
