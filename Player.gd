@@ -24,11 +24,11 @@ func _physics_process(delta):
 			playerAnim.play("WalkDown")
 	if Input.is_action_pressed("ui_left"):
 		move_vec.x -= 1
-		if playerAnim.animation != "WalkLeft":
+		if playerAnim.animation != "WalkLeft" and move_vec.y == 0:
 			playerAnim.play("WalkLeft")
 	if Input.is_action_pressed("ui_right"):
 		move_vec.x += 1
-		if playerAnim.animation != "WalkRight":
+		if playerAnim.animation != "WalkRight" and move_vec.y == 0:
 			playerAnim.play("WalkRight")
 			
 	if move_vec == Vector2(0, 0) and last_movement != Vector2(0, 0):
