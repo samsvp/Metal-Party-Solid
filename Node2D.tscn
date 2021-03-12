@@ -78,3 +78,4 @@ script = ExtResource( 5 )
 [node name="Line2D" type="Line2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 500, 400 )
