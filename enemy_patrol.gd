@@ -1,19 +1,13 @@
 extends Sprite
 
 var speed = 400.0
-var path = PoolVector2Array() setget set_path
+var path = PoolVector2Array()
 
 onready var path_2d = get_node("../Waypoints")
 onready var nav_2d = get_node("../Navigation2D")
 onready var line_2d = get_node("../Line2D")
 
 onready var curve = path_2d.get_curve()
-
-func set_path(value):
-	path = value
-	if value.size() == 0:
-		return
-	#set_process(true)
 	
 func set_target_pos(pos):
 	var new_path = nav_2d.get_simple_path(self.global_position, pos)
