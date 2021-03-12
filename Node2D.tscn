@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/tile_sets/Node2D.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://enemy_patrol.gd" type="Script" id=5]
 
@@ -81,3 +82,5 @@ script = ExtResource( 5 )
 
 [node name="Waypoints" type="Path2D" parent="."]
 curve = SubResource( 1 )
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 500, 400 )
