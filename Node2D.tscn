@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/tile_sets/Node2D.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Camera2D.gd" type="Script" id=4]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -85,3 +86,8 @@ position = Vector2( 528, 424 )
 [node name="enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 352, 320 )
 waypoints_path = NodePath("../Waypoints")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 528, 424 )
+current = true
+script = ExtResource( 4 )
