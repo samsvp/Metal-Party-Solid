@@ -1,7 +1,8 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
-[ext_resource path="res://animated_enemy.gd" type="Script" id=1]
+[ext_resource path="res://enemy_patrol.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/NPCChad.png" type="Texture" id=2]
+[ext_resource path="res://animated_enemy.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 18.7127
@@ -194,3 +195,6 @@ position = Vector2( -4.30763, 3.8147e-06 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 34 )
 animation = "WalkLeft"
+
+[node name="animated_enemy" type="KinematicBody2D" parent="."]
+script = ExtResource( 3 )

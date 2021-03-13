@@ -8,6 +8,7 @@ export var view_distance = 200
 export var fov = 90 # detection fov
 onready var cfov = cos(deg2rad(fov))
 
+
 onready var enemyAnim = get_node("EnemyAnim")
 export (NodePath) var waypoints_path
 onready var path_2d = get_node(waypoints_path)
@@ -72,12 +73,8 @@ func patrol(distance):
 		var distance_to_next = start_point.distance_to(path[0])
 		if distance <= distance_to_next and distance >= 0.0:
 			heading = (path[0] - position).normalized()
-			if heading[0]>0:
-				if enemyAnim.animation != "WalkRight":
-					enemyAnim.play("WalkRight")
-			else:
-				if enemyAnim.animation != "WalkLeft":
-					enemyAnim.play("WalkLeft")
+			for el in self.get_children():
+				el.update()
 			position = start_point.linear_interpolate(path[0], distance/distance_to_next)
 			break
 		elif path.size() == 1 && distance > distance_to_next:
