@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 # Declare member variables here. Examples:
-const MOVE_SPEED = 100
+const MOVE_SPEED = 150
 onready var playerAnim = get_node("PlayerAnim") 
 
 # Called when the node enters the scene tree for the first time.

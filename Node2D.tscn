@@ -93,8 +93,8 @@ position = Vector2( 528, 424 )
 current = true
 script = ExtResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.392157 )
+[node name="BlackOverlay" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.294118 )
 position = Vector2( 699.456, 1836.74 )
 scale = Vector2( 16.6009, 16.2672 )
 texture = ExtResource( 5 )
