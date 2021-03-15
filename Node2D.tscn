@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/tile_sets/Node2D.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Camera2D.gd" type="Script" id=4]
 [ext_resource path="res://assets/sprites/BlackOverlay.png" type="Texture" id=5]
+[ext_resource path="res://enemy_follow.gd" type="Script" id=6]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -86,7 +87,16 @@ position = Vector2( 528, 424 )
 
 [node name="enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 352, 320 )
+speed = 150.0
+nav_2d_path = NodePath("../Navigation2D")
+player_path = NodePath("../Player")
 waypoints_path = NodePath("../Waypoints")
+
+[node name="enemy_follow" parent="." instance=ExtResource( 3 )]
+position = Vector2( 680, 480 )
+script = ExtResource( 6 )
+nav_2d_path = NodePath("../Navigation2D")
+player_path = NodePath("../Player")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 528, 424 )
