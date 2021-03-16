@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://dialogue.gd" type="Script" id=1]
+[ext_resource path="res://DotGothic16-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="DialogueSystem" type="Control"]
+margin_left = 513.0
+margin_top = 490.0
+margin_right = 513.0
+margin_bottom = 490.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Chat" type="ColorRect" parent="."]
+margin_left = -502.0
+margin_top = -102.0
+margin_right = 502.0
+margin_bottom = 102.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChatBackground" type="ColorRect" parent="Chat"]
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 1002.0
+margin_bottom = 202.0
+color = Color( 0.0156863, 0.0117647, 0.188235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Control" parent="Chat"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_left = -500.0
+margin_top = -100.0
+margin_right = 500.0
+margin_bottom = 100.0
+custom_fonts/mono_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

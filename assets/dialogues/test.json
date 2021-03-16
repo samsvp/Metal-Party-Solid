@@ -1,0 +1,16 @@
+{
+    "spriteLeft" : "res://icon.png",
+    "spriteRight" : "res://icon.png",
+    "0" : {
+        "effect" : ["akward",50],
+        "phrase" : "lol",
+        "options" : {
+            "timeout" : "",
+            "option 1" : "",
+            "option 2" : "",
+            "option 3" : ""
+        },
+        "answer" : null
+    }
+
+}

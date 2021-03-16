@@ -1,0 +1,237 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://dialogue_system.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://DotGothic_DynamicFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://DotGothic_DynamicFont_Small.tres" type="DynamicFont" id=4]
+
+[node name="DialogueSystem" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Shadow" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.12131
+margin_right = 2.12134
+color = Color( 0, 0, 0, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Center" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="Center"]
+current = true
+
+[node name="SpriteRight" type="Sprite" parent="Center"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 2 )
+
+[node name="SpriteLeft" type="Sprite" parent="Center"]
+texture = ExtResource( 2 )
+
+[node name="Chat" type="ColorRect" parent="."]
+anchor_top = 0.65
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0745098, 0, 0.207843, 0.862745 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftName" type="ColorRect" parent="Chat"]
+margin_right = 200.0
+margin_bottom = 25.0
+color = Color( 0, 0, 0, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Chat/LeftName"]
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 4 )
+text = "JOTARO KUJO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightName" type="ColorRect" parent="Chat"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -200.0
+margin_bottom = 25.0
+color = Color( 0, 0, 0, 0.588235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Chat/RightName"]
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 4 )
+text = "DIO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="Chat"]
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+custom_fonts/normal_font = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpSelect1" type="ColorRect" parent="Chat"]
+anchor_left = 0.025
+anchor_top = 0.2
+anchor_right = 0.025
+anchor_bottom = 0.2
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 10, 10 )
+color = Color( 0.905882, 0.309804, 0.0196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpSelect2" type="ColorRect" parent="Chat"]
+anchor_left = 0.025
+anchor_top = 0.5
+anchor_right = 0.025
+anchor_bottom = 0.5
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 10, 10 )
+color = Color( 0, 0.886275, 0.427451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OpSelect3" type="ColorRect" parent="Chat"]
+anchor_left = 0.025
+anchor_top = 0.8
+anchor_right = 0.025
+anchor_bottom = 0.8
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 10, 10 )
+color = Color( 0, 0.32549, 0.886275, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Op1" type="RichTextLabel" parent="Chat"]
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.35
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Op2" type="RichTextLabel" parent="Chat"]
+anchor_left = 0.05
+anchor_top = 0.35
+anchor_right = 0.95
+anchor_bottom = 0.65
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Op3" type="RichTextLabel" parent="Chat"]
+anchor_left = 0.05
+anchor_top = 0.65
+anchor_right = 0.95
+anchor_bottom = 0.95
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HP" type="Control" parent="."]
+anchor_left = 0.02
+anchor_top = 0.02
+anchor_right = 0.02
+anchor_bottom = 0.07
+margin_right = 500.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HpBar" type="ColorRect" parent="HP"]
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.7
+color = Color( 0.00392157, 0.509804, 0.356863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="HP"]
+anchor_right = 0.1
+anchor_bottom = 1.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center] HP [/center]"
+text = " HP "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TIME" type="Control" parent="."]
+anchor_top = 0.625
+anchor_right = 1.0
+anchor_bottom = 0.65
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeBar" type="ColorRect" parent="TIME"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0.784314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Minigame" type="Control" parent="."]
+anchor_top = 0.125
+anchor_right = 1.0
+anchor_bottom = 0.225
+__meta__ = {
+"_edit_use_anchors_": false
+}
