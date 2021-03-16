@@ -100,7 +100,7 @@ waypoints_path = NodePath("../Waypoints")
 [node name="enemy_follow" parent="." instance=ExtResource( 3 )]
 position = Vector2( 680, 480 )
 script = ExtResource( 6 )
-animations = [ "res://assets/prefabs/chad1.tres", "res://assets/prefabs/chad2.tres" ]
+animations = [ "res://assets/prefabs/stacy1.tres", "res://assets/prefabs/stacy2.tres", "res://assets/prefabs/stacy3.tres" ]
 nav_2d_path = NodePath("../Navigation2D")
 player_path = NodePath("../Player")
 
