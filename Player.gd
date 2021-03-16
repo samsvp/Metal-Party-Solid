@@ -40,3 +40,7 @@ func _physics_process(delta):
 	last_movement = move_vec
 	move_vec = move_vec.normalized()
 	move_and_collide(move_vec * MOVE_SPEED * delta)
+
+
+func _on_Level_1__body_entered(body):
+	pass # Replace with function body.
