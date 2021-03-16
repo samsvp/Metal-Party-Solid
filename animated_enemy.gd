@@ -1,14 +1,12 @@
-extends KinematicBody2D
+extends "enemy.gd"
 
-onready var enemyAnim = get_node("../EnemyAnim")
 # Declare member variables here. Examples:
-var heading = 2
-# var b = "text"
-
-
+var enemyAnim = "text"
+func _ready():
+	enemyAnim = get_node(animations[randi()%animations.size()])
+	
 # Called when the node enters the scene tree for the first time.
 func update():
-	heading = get_node("..").get("heading")
 	if abs(heading[0])>abs(heading[1]):
 		if heading[0] > 0:
 			if enemyAnim.animation != "WalkRight":

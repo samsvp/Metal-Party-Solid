@@ -1,4 +1,4 @@
-extends "enemy.gd"
+extends "animated_enemy.gd"
 
 func _ready():
 	set_target_pos(player.position)

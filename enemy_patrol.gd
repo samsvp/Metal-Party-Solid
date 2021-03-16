@@ -1,4 +1,4 @@
-extends "enemy.gd"
+extends "animated_enemy.gd"
 
 
 export (NodePath) var waypoints_path

@@ -88,6 +88,7 @@ position = Vector2( 528, 424 )
 [node name="enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 352, 320 )
 speed = 150.0
+animations = [ "./Chad1", "./Chad2", "./Chad3" ]
 nav_2d_path = NodePath("../Navigation2D")
 player_path = NodePath("../Player")
 waypoints_path = NodePath("../Waypoints")
@@ -95,6 +96,7 @@ waypoints_path = NodePath("../Waypoints")
 [node name="enemy_follow" parent="." instance=ExtResource( 3 )]
 position = Vector2( 680, 480 )
 script = ExtResource( 6 )
+animations = [ "./Chad1", "./Chad2" ]
 nav_2d_path = NodePath("../Navigation2D")
 player_path = NodePath("../Player")
 

@@ -4,6 +4,7 @@ export var speed = 100.0
 var path = PoolVector2Array()
 
 # detection properties
+export (Array,String) var animations
 export var view_distance = 200
 export var fov = 90 # detection fov
 onready var cfov = cos(deg2rad(fov))
@@ -15,7 +16,6 @@ export (NodePath) var player_path
 export onready var player = get_node(player_path)
 
 # get enemy nodes
-onready var enemyAnim = get_node("EnemyAnim")
 onready var ray = get_node("RayCast2D")
 
 onready var heading = Vector2(0, 0)
