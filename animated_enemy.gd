@@ -3,10 +3,12 @@ extends "enemy.gd"
 # Declare member variables here. Examples:
 var enemyAnim = "text"
 func _ready():
-	enemyAnim = get_node(animations[randi()%animations.size()])
-	
-# Called when the node enters the scene tree for the first time.
-func update():
+	var sprites = load(animations[randi()%animations.size()])
+	enemyAnim = get_node("./AnimatedSprite")
+	enemyAnim.frames = sprites
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
 	if abs(heading[0])>abs(heading[1]):
 		if heading[0] > 0:
 			if enemyAnim.animation != "WalkRight":
@@ -22,7 +24,3 @@ func update():
 			if enemyAnim.animation != "WalkDown":
 				enemyAnim.play("WalkDown")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

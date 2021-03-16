@@ -1,13 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://enemy_patrol.gd" type="Script" id=1]
-[ext_resource path="res://assets/prefabs/chad1.tres" type="SpriteFrames" id=2]
-[ext_resource path="res://assets/prefabs/chad2.tres" type="SpriteFrames" id=3]
-[ext_resource path="res://assets/prefabs/chad3.tres" type="SpriteFrames" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 18.7127
-height = 26.3737
+height = 0.0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="enemy" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -20,19 +25,7 @@ shape = SubResource( 1 )
 enabled = true
 collide_with_areas = true
 
-[node name="Chad1" type="AnimatedSprite" parent="."]
-position = Vector2( -4.30763, 3.8147e-06 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 2, 2 )
-frames = ExtResource( 2 )
-animation = "Not"
-
-[node name="Chad2" type="AnimatedSprite" parent="."]
-scale = Vector2( 2, 2 )
-frames = ExtResource( 3 )
-animation = "Not"
-
-[node name="Chad3" type="AnimatedSprite" parent="."]
-position = Vector2( -4.68221, -1.87288 )
-scale = Vector2( 2, 2 )
-frames = ExtResource( 4 )
-animation = "Not"
+frames = SubResource( 2 )
+playing = true
