@@ -132,7 +132,8 @@ shape = SubResource( 2 )
 
 [node name="BlackOverlay" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.294118 )
-position = Vector2( -763.311, 1922.98 )
+position = Vector2( 618.806, 1817.98 )
 scale = Vector2( 16.6009, 16.6148 )
 texture = ExtResource( 5 )
 [connection signal="body_entered" from="Level 1 " to="Level 1 " method="_on_Level_1__body_entered"]
+[connection signal="disable_enemies_1" from="Level 1 " to="enemy" method="_on_Level_1__disable_enemies_1"]
