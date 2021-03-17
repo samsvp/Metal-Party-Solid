@@ -23,4 +23,3 @@ func _process(delta):
 		else:
 			if enemyAnim.animation != "WalkDown":
 				enemyAnim.play("WalkDown")
-

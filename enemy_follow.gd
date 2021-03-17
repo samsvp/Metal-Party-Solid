@@ -5,7 +5,7 @@ func _ready():
 
 
 func _process(delta):
-	seeing_player(player.position)
+	seeing_player()
 	var move_distance = speed * delta
 	move(move_distance)
 	
