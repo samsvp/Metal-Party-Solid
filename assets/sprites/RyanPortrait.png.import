@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayerPortrait.png-442896763520acb18485c4585c579316.stex"
+path="res://.import/RyanPortrait.png-87a84ddb1226780147f50e0675aeb0f8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/PlayerPortrait.png"
-dest_files=[ "res://.import/PlayerPortrait.png-442896763520acb18485c4585c579316.stex" ]
+source_file="res://assets/sprites/RyanPortrait.png"
+dest_files=[ "res://.import/RyanPortrait.png-87a84ddb1226780147f50e0675aeb0f8.stex" ]
 
 [params]
 
