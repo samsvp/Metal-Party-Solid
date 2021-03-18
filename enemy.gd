@@ -41,14 +41,14 @@ func set_target_pos(pos):
 	path = new_path
 
 
-func seeing_player(player_pos):
-	ray.cast_to =  player_pos - self.position
+func seeing_player():
+	ray.cast_to =  player.position - self.position
 	if ray.is_colliding():
 		if not ray.get_collider().is_in_group("Player"):
 			return false
-	if  view_distance < self.position.distance_to(player_pos):
+	if  view_distance < self.position.distance_to(player.position):
 		return false
-	var enemy_to_player = (player_pos - self.position).normalized()
+	var enemy_to_player = (player.position - self.position).normalized()
 	if enemy_to_player.dot(heading) > cfov:
 		return true
 	return false
